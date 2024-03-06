@@ -11,14 +11,14 @@ let kilometres = prompt ('quanti chilometri devi percorrere');
 let age = prompt ('age');
 console.log(kilometres, age);
 
-if (isNaN (kilometres) || isNaN (age)){
+if (isNaN (kilometres) || isNaN(age)){
    document.getElementById('price').innerHTML ='errore inserisci un numero!';
    console.log('errore inserisci un numero!');
 }
 
-let ticket
-if(isNaN(age)){
-    ticket = kilometres*0.21;
+let ticket 
+if(!isNaN(age)){
+ ticket = kilometres*0.21;
 }
 let sconto20;
 let sconto40;
