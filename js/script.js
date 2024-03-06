@@ -28,16 +28,16 @@ if(age < 18){
    sconto20 =ticket*20 /100;
    decimale = sconto20.toFixed(2)
    document.getElementById('price').innerHTML ='Il tuo biglietto costa: ' + decimale + (" \u20AC");
-   console.log(`il tuo biglietto costa: ${sconto20}`);
+   console.log(`il tuo biglietto costa: ${decimale}`);
 }else if (age > 65){
    sconto40 =ticket*40 /100;
    decimale = sconto40.toFixed(2)
    document.getElementById('price').innerHTML ='Il tuo biglietto costa: ' + decimale + (" \u20AC");
-   console.log(`il tuo biglietto costa: ${sconto40}`);
+   console.log(`il tuo biglietto costa: ${decimale}`);
 }else if(age>=18 && age<=65){
     decimale = ticket.toFixed(2)
     document.getElementById('price').innerHTML ='Il tuo biglietto costa: ' + decimale + (" \u20AC");
-    console.log( `il tuo biglietto costa: ${ticket}`);
+    console.log( `il tuo biglietto costa: ${decimale}`);
 }
 
     
