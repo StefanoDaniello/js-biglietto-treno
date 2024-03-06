@@ -16,7 +16,10 @@ if (isNaN (kilometres) || isNaN (age)){
    console.log('errore inserisci un numero!');
 }
 
-let ticket = kilometres*0.21;
+let ticket
+if(isNaN(age)){
+    ticket = kilometres*0.21;
+}
 let sconto20;
 let sconto40;
 let decimale
