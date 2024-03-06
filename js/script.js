@@ -12,23 +12,29 @@ let age = prompt ('age');
 console.log(kilometres, age);
 
 if (isNaN (kilometres) || isNaN (age)){
-    console.log('errore inserisci un numero!')
+   document.getElementById('price').innerHTML ='errore inserisci un numero!';
+   console.log('errore inserisci un numero!');
 }
 
-let ticket = kilometres*0.21 ;
+let ticket = kilometres*0.21;
 let sconto20;
 let sconto40;
+let decimale
+console.log(ticket); 
 
 if(age < 18){
    sconto20 =ticket*20 /100;
-   document.getElementById('price').innerHTML ='Il tuo biglietto costa: ' + sconto20 + (" \u20AC");
+   decimale = sconto20.toFixed(2)
+   document.getElementById('price').innerHTML ='Il tuo biglietto costa: ' + decimale + (" \u20AC");
    console.log(`il tuo biglietto costa: ${sconto20}`);
 }else if (age > 65){
    sconto40 =ticket*40 /100;
-   document.getElementById('price').innerHTML ='Il tuo biglietto costa: ' + sconto40 + (" \u20AC");
+   decimale = sconto40.toFixed(2)
+   document.getElementById('price').innerHTML ='Il tuo biglietto costa: ' + decimale + (" \u20AC");
    console.log(`il tuo biglietto costa: ${sconto40}`);
 }else if(age>=18 && age<=65){
-    document.getElementById('price').innerHTML ='Il tuo biglietto costa: ' + ticket + (" \u20AC");
+    decimale = ticket.toFixed(2)
+    document.getElementById('price').innerHTML ='Il tuo biglietto costa: ' + decimale + (" \u20AC");
     console.log( `il tuo biglietto costa: ${ticket}`);
 }
 
