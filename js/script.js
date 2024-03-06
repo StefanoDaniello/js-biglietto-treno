@@ -21,13 +21,15 @@ let sconto40;
 
 if(age < 18){
    sconto20 =ticket*20 /100;
+   document.getElementById('price').innerHTML ='Il tuo biglietto costa: ' + sconto20 + (" \u20AC");
    console.log(`il tuo biglietto costa: ${sconto20}`);
 }else if (age > 65){
    sconto40 =ticket*40 /100;
+   document.getElementById('price').innerHTML ='Il tuo biglietto costa: ' + sconto40 + (" \u20AC");
    console.log(`il tuo biglietto costa: ${sconto40}`);
 }else if(age>=18 && age<=65){
+    document.getElementById('price').innerHTML ='Il tuo biglietto costa: ' + ticket + (" \u20AC");
     console.log( `il tuo biglietto costa: ${ticket}`);
 }
 
-
-
+    
