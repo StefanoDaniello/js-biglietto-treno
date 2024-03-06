@@ -20,7 +20,6 @@ let ticket = kilometres*0.21;
 let sconto20;
 let sconto40;
 let decimale
-console.log(ticket); 
 
 if(age < 18){
    sconto20 =ticket*20 /100;
